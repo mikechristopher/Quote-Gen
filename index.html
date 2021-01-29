@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<title>Quote Generator</title>
+</head>
+
+<body>
+	<div class="bg-gradient-to-b from-gray-300 to-gray-100 flex h-screen">
+		<div class="p-6 m-auto bg-white rounded-lg space-x-4 shadow-lg max-w-xs md:max-w-xl box-border" id="quotebox">
+			<div>
+				<div class="flex flex-col md:flex-row">
+					<div id="quote"
+						class="flex flex-col md:flex-row items-center lg:flex-grow md:w-128 md:text-xl align-middle order-2 md:order-1 text-center">
+						Loading...
+					</div>
+					<div class="align-middle  order-1 md:order-2 -m-16 md:m-6 invisible md:visible">
+						<img class="w-32 h-32 max-w-xl opacity-75 rounded-full" src="/355952.jpg">
+					</div>
+				</div>
+				<p class="text-gray-600 text-sm pb-4" id="author"></p>
+
+				<button id="spin"
+					class="flex items-center px-4 py-2 m-auto font-semibold text-white transition duration-500 ease-in-out transform rounded-lg shadow-xl bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-500 hover:to-gray-700 hover:-translate-y-1 hover:scale-110 focus:ring focus:outline-none">Spin
+					it!</button>
+				<div id="copyright" class="text-xs text-center pt-8 mx-auto text-gray-400">Quotes kindly provided by: <a
+						href="http://quotes.stormconsultancy.co.uk/api">Adam Pope @ StormConsultancy</a></div>
+				<div id="apiFailed" class="text-xs text-center mx-auto text-red-400"></div>
+			</div>
+		</div>
+
+</body>
+<script src="/index.js"></script>
+
+</html>
