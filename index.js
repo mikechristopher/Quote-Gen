@@ -9,7 +9,7 @@ const quoteAuthor = document.getElementById("author");
 const quoteText = document.getElementById("quote");
 
 //Endpoint Definition
-const APIURL = "http://quotes.stormconsultancy.co.uk/random.json";
+const APIURL = "https://dummyjson.com/quotes";
 
 function getQuote() {
     fetch(APIURL)
