@@ -2,7 +2,11 @@
 window.addEventListener("load", getQuote);
 
 //Create EventListener for button
-document.getElementById("spin").addEventListener("click", getQuote);
+//document.getElementById("spin").addEventListener("click", getQuote);
+const el = document.querySelector("#spin");
+if (el) {
+  el.addEventListener("click", getQuote, false);
+}
 
 //Selecting the ID's in the HTML in order to populate data
 const quoteAuthor = document.getElementById("author");
@@ -22,7 +26,7 @@ function getQuote() {
     })
     .catch((error) => {
       //returns error to console with what the error is and then populates with default quote and replaces copyright for a failure notice to the UI.
-      console.error("Error:", error);
+      console.error("Quote Fetch Error:", error);
       quoteAuthor.innerText = "Marcus Brigstocke";
       quoteText.innerText =
         "Computer games don't affect kids; I mean if Pac-Man affected us as kids, we'd all be running around in darkened rooms, munching magic pills and listening to repetitive electronic music.";
